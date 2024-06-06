@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+.filterBox {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0fafb;
+  font-family: Spartan, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-image: url(./images/bg-header-mobile.svg);
+    background-color: #5ca5a5;
+    background-size: cover;
+    height: 156px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f0fafb;
+  }
+
+  .card {
+    width: 327px;
+    height: 257px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -7px rgba(93, 164, 164, 0.5);
+    padding: 1.5rem;
+    margin-top: 20px;
+  }
+
+  [data-title] {
+    border-left: #5ca5a5 solid 6px;
+  }
+
+  .dataHeader {
+    display: flex;
+    gap: 10px;
+    margin-top: -30px;
+  }
+
+  .newBtn,
+  .featuredBtn {
+    width: 45px;
+    height: 20px;
+    border-radius: 90px;
+    border: 0;
+    background-color: #5ca5a5;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .featuredBtn {
+    width: 75px;
+    background-color: #2b3939;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -40px;
+  }
+
+  .company {
+    color: #5ca5a5;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .position {
+    color: #2b3939;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .contractData {
+    display: flex;
+    color: #7c8f8f;
+  }
+
+  .oval {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #7c8f8f;
+    margin: 8px 8px;
+  }
+
+  .line {
+    border: 1px solid #b7c4c4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .rightSide {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .tags button {
+    display: inline-flex;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #5ca5a5;
+    border: 0;
+    font-weight: 700;
+    width: 81px;
+    height: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .role,
+  .level,
+  .closeTagFrontend,
+  .closeTagCss {
+    width: 81px;
+    padding: 0.5rem;
+    background-color: #f2f2f2;
+    color: #5ca5a5;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  .box {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  .btn {
+    display: flex;
+  }
+
+  .closeTagFrontend,
+  .closeTagCss {
+    padding: 1rem;
+    width: 113px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .closeTagCss {
+    width: 76px;
+  }
+
+  .close {
+    background-color: #5ca5a5;
+    width: 30px;
+    height: 30px;
+    margin-left: -30px;
+    border-radius: 0 5px 5px 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    background-color: #2b3939;
+  }
+
+  .clearBtn {
+    width: 60px;
+    background-color: #ffffff;
+    color: #7c8f8f;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 1rem;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    background-image: url(./images/bg-header-desktop.svg);
+    height: 156px;
+    background-size: cover;
+    background-color: #5ca5a5;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0fafb;
+  }
+
+  .card {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 10px 15px -7px rgba(93, 164, 164, 0.5);
+    margin-top: 30px;
+
+    border-radius: 5px;
+  }
+
+  [data-title] {
+    border-left: #5ca5a5 solid 3px;
+  }
+
+  .leftSide {
+    display: flex;
+  }
+
+  .dataHeader {
+    display: flex;
+    gap: 10px;
+  }
+
+  .newBtn,
+  .featuredBtn {
+    width: 45px;
+    height: 20px;
+    border-radius: 90px;
+    border: 0;
+    background-color: #5ca5a5;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .featuredBtn {
+    width: 75px;
+    background-color: #2b3939;
+  }
+
+  .logo {
+    padding: 1rem;
+  }
+
+  .data {
+    padding: 2rem;
+  }
+
+  .company {
+    color: #5ca5a5;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 14.56px;
+  }
+
+  .position {
+    color: #2b3939;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .contractData {
+    display: flex;
+    color: #7c8f8f;
+  }
+
+  .oval {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #7c8f8f;
+    margin: 8px 8px;
+  }
+
+  .rightSide {
+    display: flex;
+  }
+
+  .tags {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-self: right;
+    gap: 1rem;
+  }
+
+  .role,
+  .level,
+  .closeTagFrontend,
+  .closeTagCss {
+    background-color: #f2f2f2;
+    color: #5ca5a5;
+    width: 81px;
+    height: 32px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .tags button {
+    display: inline-flex;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #5ca5a5;
+    border: 0;
+    font-weight: 700;
+    width: 81px;
+    height: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .box {
+    background-color: #ffffff;
+    width: 80%;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: -60px;
+    min-height: 62px;
+  }
+  .box:has(.filterBox:empty) {
+    opacity: 0;
+  }
+
+  .btn {
+    display: flex;
+    padding: 1rem;
+  }
+
+  .closeTagFrontend {
+    width: 100px;
+    height: 30px;
+  }
+
+  .close {
+    background-color: #5ca5a5;
+    width: 30px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    background-color: #2b3939;
+  }
+
+  .clearBtn {
+    width: 60px;
+    background-color: #ffffff;
+    color: #5ca5a5;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+    letter-spacing: -0.1px;
+    line-height: 24px;
+    border: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+}
